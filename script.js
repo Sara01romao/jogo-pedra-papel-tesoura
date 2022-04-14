@@ -1,36 +1,14 @@
 
-const tesoura = document.getElementById('tesoura')
-const papel = document.getElementById('papel')
-const pedra = document.getElementById('pedra')
 
 let resultado = document.getElementById('resultado')
-const jogada = document.getElementById('jogada')
-console.log(jogada)
+let selecionado = document.getElementById('selecionado')
+let comp = document.getElementById('comp')
+const jogada = document.getElementById('jogada');
+const btnStart = document.getElementById('start')
+
 
 let pc = '';
 let player = '';
-
-/*  
-tesoura.addEventListener('click', ()=>{
-    player = 'Tesoura'
-    
-
-   jogada.innerHTML=player
-})
-
-papel.addEventListener('click', ()=>{
-    player= 'Papel'
-   
-    jogada.innerHTML=player;
-
-})
-
-pedra.addEventListener('click', ()=>{
-    player= 'Pedra'
-    jogada.innerHTML=player
-})
- */
-
 
 
 function computer(){
@@ -49,15 +27,21 @@ function computer(){
     
 }
 
-pc = computer()
+function jogador(valor){
+   return valor
+}
+
  
 
 
 
 
-function res(){
-    if(player == pc){
-        return jogada.innerHTML="empate"
+function res(player, pc){
+    comp.innerHTML=`VS ${pc}`
+    if(player === pc){
+        
+        return resultado.innerHTML="empate"
+        
     }else if(player ==="Tesoura" && pc === "Papel"){
             return resultado.innerHTML="player ganhou"
     }else if (player ==="Tesoura" && pc === "Pedra"){
@@ -70,11 +54,37 @@ function res(){
     else if (player ==="Pedra" && pc === "Tesoura"){
         return resultado.innerHTML="Vc ganhou"
     } else if (player ==="Pedra" && pc === "Papel"){
-        resultado.innerHTML="Vc perdeu"
+        return resultado.innerHTML="Vc perdeu"
+        
     }
+
 
 
 }
 
-console.log(player)
+
+
+
+function msg(valor){
+   player = valor
+   
+   jogador(valor)
+  
+   selecionado.innerHTML=valor;
+
+
+}
+
+
+function start(){
+  
+    console.log(player)
+    console.log(computer())
+    res(player, computer())
+   
+
+
+}
+
+btnStart.addEventListener('click', start)
 
