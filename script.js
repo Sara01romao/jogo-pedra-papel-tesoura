@@ -7,7 +7,7 @@ const msgErro = document.getElementById('msgErro')
 const resetContainer = document.querySelector(".resetContainer") 
 const btnStart = document.getElementById('start')
 const btnReset = document.getElementById('reset')
-let  img = document.querySelector(".imgOption")
+let  img = document.querySelectorAll(".imgOption")
 
 
 let pc = '';
@@ -109,7 +109,10 @@ function reset(){
     selecionado.classList.remove("animeLeft");
     btnStart.style.display="block";
     resetContainer.style.display="none";
-    img.style.border='none'
+    img.forEach(element => {
+        element.style.border='none'
+    });
+    
 
 }
 
