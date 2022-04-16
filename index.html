@@ -4,32 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Jogo: Pedra - Papel - Tesoura</title>
 </head>
 <body>
     
-    <div>
-        <label for="">Tesoura</label>
-        <input onchange="msg(this.value)" type="radio" value="Tesoura" name="player" id="jogada">   
+    <section >
+        <h3>Selecionar Jogada: </h3>
+        <div class="containerJogadas">
+            <label for="pedra">
+            
+                <input onchange="msg(this.value)" type="radio" value="pedra" name="player" id="pedra">
+                <img  src="./images/pedra.jpg" alt="pedra">
+                Pedra
+            </label>
+            
+            <label for="papel">
+               
+                <input onchange="msg(this.value)" type="radio" value="papel" name="player" id="papel">  
+                <img src="./images/papel.jpg" alt="papel">
+                Papel
+            </label>
+            
+            <label for="tesoura">
+               
+                <input onchange="msg(this.value)" type="radio" value="tesoura" name="player" id="tesoura">
+                <img src="./images/tesoura.jpg" alt="tesoura">  
+                Tesoura
+            </label>
+        </div>      
+    </section>
 
-        <label for="">Papel</label>
-        <input onchange="msg(this.value)" type="radio" value="Papel" name="player" id="jogada">  
+    <main>
+        <h2 id="selecionado"></h2>
 
-        <label>Pedra</label>
-        <input onchange="msg(this.value)" type="radio" value="Pedra" name="player" id="jogada">  
-    </div>
+        <button id="start">Começar</button>
+
+        <h2 id="comp"></h2>
+    </main>
   
 
-    <div>
-        <img  src="./images/pedra.jpg" alt="pedra">
-        <img src="./images/papel.jpg" alt="papel">
-        <img src="./images/tesoura.jpg" alt="tesoura">
-    </div>
+   
 
-   <h1 id="selecionado"></h1>
-   <span id="comp"></span>
+   
+   
 
-   <button id="start">Começar</button>
+   
 
     <h2 id="resultado"></h2>
 

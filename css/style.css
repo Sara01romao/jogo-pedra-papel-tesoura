@@ -1,0 +1,25 @@
+
+
+
+label{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.containerJogadas{
+    display: flex;
+    gap: 20px;
+    border: 1px solid;
+}
+
+.containerJogadas label > input{
+    visibility: hidden;
+}
+
+.containerJogadas label > input:checked + img{
+    border:1px solid red;
+}
