@@ -10,37 +10,50 @@
 <body>
     
     <section >
-        <h3>Selecionar Jogada: </h3>
+        <h3>Selecionar Jogada: <span id="msgErro"></span> </h3>
         <div class="containerJogadas">
             <label for="pedra">
             
                 <input onchange="msg(this.value)" type="radio" value="pedra" name="player" id="pedra">
-                <img  src="./images/pedra.jpg" alt="pedra">
-                Pedra
+                <img class="imgOption" src="./images/pedra.jpg" alt="pedra">
+                <p>Pedra</p>
             </label>
             
             <label for="papel">
                
                 <input onchange="msg(this.value)" type="radio" value="papel" name="player" id="papel">  
                 <img src="./images/papel.jpg" alt="papel">
-                Papel
+                <p>Papel</p>
             </label>
             
             <label for="tesoura">
                
                 <input onchange="msg(this.value)" type="radio" value="tesoura" name="player" id="tesoura">
                 <img src="./images/tesoura.jpg" alt="tesoura">  
-                Tesoura
+                <p>Tesoura</p>
             </label>
-        </div>      
+        </div>  
+          
     </section>
 
     <main>
-        <h2 id="selecionado"></h2>
 
-        <button id="start">Começar</button>
+        <div id="selecionado" ></div>
+         
+        <div>
+            <button id="start">Começar</button>
 
-        <h2 id="comp"></h2>
+            <div class="resetContainer">
+                <h2 id="resultado"></h2>
+                <button id="reset">Jogar de Novo</button>
+                
+            </div>
+        </div>
+       
+
+        <div id="comp"> </div>
+
+      
     </main>
   
 
@@ -51,7 +64,7 @@
 
    
 
-    <h2 id="resultado"></h2>
+   
 
 
 
