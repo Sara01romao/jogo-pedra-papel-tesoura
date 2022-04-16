@@ -2,9 +2,12 @@
 
 let resultado = document.getElementById('resultado')
 let selecionado = document.getElementById('selecionado')
-let comp = document.getElementById('comp')
-
+let comp = document.getElementById('comp');
+const msgErro = document.getElementById('msgErro')
+const resetContainer = document.querySelector(".resetContainer") 
 const btnStart = document.getElementById('start')
+const btnReset = document.getElementById('reset')
+let  img = document.querySelector(".imgOption")
 
 
 let pc = '';
@@ -37,7 +40,7 @@ function jogador(valor){
 
 
 function res(player, pc){
-    comp.innerHTML=`VS <img src="../images/${pc}.jpg" alt="${pc}">${pc}`
+    comp.innerHTML=` <img src="../images/${pc}.jpg" alt="${pc}"><p>${pc}</p>`
     if(player === pc){
         
         return resultado.innerHTML="empate"
@@ -70,22 +73,44 @@ function msg(valor){
    
    jogador(valor)
 
-  
-   selecionado.innerHTML=`<img src="../images/${valor}.jpg" alt="${valor}"> ${valor}`;
+   selecionado.innerHTML=`<img src="../images/${valor}.jpg" alt="${valor}"> <p>${valor}</p>`;
 
 
 }
 
 
 function start(){
-  
+    
+  if(player !== ""){
+    msgErro.innerText=""
     console.log(player)
     console.log(computer())
     res(player, computer())
-   
+    selecionado.classList.add("animeLeft");
+    btnStart.style.display="none";
+    resetContainer.style.display="flex";
 
 
+  }else{
+    
+    msgErro.style.color="red"  
+    msgErro.innerText="selecione uma jogada"
+  }
+    
 }
 
 btnStart.addEventListener('click', start)
 
+
+function reset(){
+    player="";
+    selecionado.innerHTML=``;
+    comp.innerHTML=``;
+    selecionado.classList.remove("animeLeft");
+    btnStart.style.display="block";
+    resetContainer.style.display="none";
+    img.style.border='none'
+
+}
+
+btnReset.addEventListener('click', reset)
