@@ -1,88 +1,87 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-section{
-    max-width: 800px;
-    margin: 0 auto;
-    padding-top: 50px;
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-
-label{
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+label {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-
-
-
-.containerJogadas{
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    border: 2px solid rgb(175, 175, 175);
-    border-radius: 20px;
-    height: 120px;
-    margin-bottom: 50px;
+.containerJogadas {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  border: 2px solid rgb(175, 175, 175);
+  border-radius: 20px;
+  height: 120px;
+  margin-bottom: 50px;
 }
 
-.containerJogadas img{
-    width: 100%;
-    object-fit: contain;
+.containerJogadas img {
+  width: 100%;
+  object-fit: contain;
 }
 
-.containerJogadas label > input{
-    visibility: hidden;
+.containerJogadas label > input {
+  visibility: hidden;
 }
 
-.containerJogadas label > input:checked + img{
-    border:1px solid red;
+.containerJogadas label > input:checked + img {
+  border: 1px solid red;
 }
 
-label > p{
-    margin-top: 10px;
+label > p {
+  margin-top: 10px;
 }
 
+main {
+  margin-top: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
 
-main{
-    margin-top: 50px;
-    max-width: 800px;
-    height: 250px;
-    margin: 0 auto;
-    background: rgb(207, 236, 255);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 50px;
+  padding: 20px;
 }
 
-.resetContainer{
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+.mainContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgb(207, 236, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 250px;
 }
 
-.animeLeft{
-    opacity: 0;
-    transform: translateX(-20px);
-    animation: animeLeft 0.3s forwards
+.resetContainer {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.animeLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: animeLeft 0.3s forwards;
 }
 
 @keyframes animeLeft {
-    to{
-        opacity: 1;
-        transform: initial;
-    }
-  
-    
+  to {
+    opacity: 1;
+    transform: initial;
+  }
 }
