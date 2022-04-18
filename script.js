@@ -7,7 +7,8 @@ const msgErro = document.getElementById('msgErro')
 const resetContainer = document.querySelector(".resetContainer") 
 const btnStart = document.getElementById('start')
 const btnReset = document.getElementById('reset')
-let  img = document.querySelectorAll(".imgOption")
+const inputs = document.querySelectorAll(".input")
+console.log(inputs)
 
 
 let pc = '';
@@ -32,6 +33,7 @@ function computer(){
 
 function jogador(valor){
    return valor
+   
 }
 
  
@@ -74,7 +76,7 @@ function msg(valor){
    jogador(valor)
 
    selecionado.innerHTML=`<img src="../images/${valor}.jpg" alt="${valor}"> <p>${valor}</p>`;
-
+ 
 
 }
 
@@ -89,6 +91,9 @@ function start(){
     selecionado.classList.add("animeLeft");
     btnStart.style.display="none";
     resetContainer.style.display="flex";
+    inputs.forEach(elements =>{
+        elements.disabled =true;
+    })
 
 
   }else{
@@ -103,15 +108,20 @@ btnStart.addEventListener('click', start)
 
 
 function reset(){
+    inputs.forEach(elements =>{
+        elements.disabled =false;
+    })
+
     player="";
     selecionado.innerHTML=``;
     comp.innerHTML=``;
     selecionado.classList.remove("animeLeft");
     btnStart.style.display="block";
     resetContainer.style.display="none";
-    img.forEach(element => {
-        element.style.border='none'
-    });
+    inputs.forEach(item =>{
+        item.checked=false;
+    })
+  
     
 
 }
