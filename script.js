@@ -75,7 +75,7 @@ function msg(valor){
    
    jogador(valor)
 
-   selecionado.innerHTML=`<img src="../images/${valor}.jpg" alt="${valor}"> <p>${valor}</p>`;
+  /*  selecionado.innerHTML=`<img src="../images/${valor}.jpg" alt="${valor}"> <p>${valor}</p>`; */
  
 
 }
@@ -87,6 +87,7 @@ function start(){
     msgErro.innerText=""
     console.log(player)
     console.log(computer())
+    selecionado.innerHTML=`<img src="../images/${player}.jpg" alt="${player}"> <p>${player}</p>`;
     res(player, computer())
     selecionado.classList.add("animeLeft");
     btnStart.style.display="none";
