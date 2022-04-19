@@ -98,8 +98,8 @@ function start(){
 
   }else{
     
-    msgErro.style.color="red"  
-    msgErro.innerText="selecione uma jogada"
+    msgErro.style.color="red"  ;
+    msgErro.innerHTML=`<img src="../images/alerta.svg" alt="icon"> ` ;
   }
     
 }

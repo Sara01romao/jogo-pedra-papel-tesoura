@@ -10,29 +10,33 @@
 <body>
     
     <section >
-        <h3>Selecionar Jogada: <span id="msgErro"></span> </h3>
-        <div class="containerJogadas">
-            <label for="pedra">
-            
-                <input onchange="msg(this.value)" type="radio" value="pedra" name="player" id="pedra" class="input">
-                <img  src="./images/pedra.jpg" alt="pedra">
-                <p>Pedra</p>
-            </label>
-            
-            <label for="papel">
-               
-                <input onchange="msg(this.value)" type="radio" value="papel" name="player" id="papel" class="input">  
-                <img  src="./images/papel.jpg" alt="papel">
-                <p>Papel</p>
-            </label>
-            
-            <label for="tesoura">
-               
-                <input onchange="msg(this.value)" type="radio" value="tesoura" name="player" id="tesoura" class="input">
-                <img  src="./images/tesoura.jpg" alt="tesoura">  
-                <p>Tesoura</p>
-            </label>
-        </div>  
+        <h1>Pedra - Papel - Tesoura</h1>
+
+        <div class="container">
+            <h3>Selecionar Jogada: <span id="msgErro"></span> </h3>
+            <div class="containerJogadas">
+                <label for="pedra">
+                
+                    <input onchange="msg(this.value)" type="radio" value="pedra" name="player" id="pedra" class="input">
+                    <img  src="./images/pedra.jpg" alt="pedra">
+                    <p>Pedra</p>
+                </label>
+                
+                <label for="papel">
+                
+                    <input onchange="msg(this.value)" type="radio" value="papel" name="player" id="papel" class="input">  
+                    <img  src="./images/papel.jpg" alt="papel">
+                    <p>Papel</p>
+                </label>
+                
+                <label for="tesoura">
+                
+                    <input onchange="msg(this.value)" type="radio" value="tesoura" name="player" id="tesoura" class="input">
+                    <img  src="./images/tesoura.jpg" alt="tesoura">  
+                    <p>Tesoura</p>
+                </label>
+            </div>  
+    </div>
           
     </section>
 

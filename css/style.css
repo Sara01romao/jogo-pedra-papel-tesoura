@@ -1,7 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Roboto:wght@100;400;700&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+h1{
+  font-family: 'Itim', cursive;
+  font-weight: 100;
+  text-align: center;
+  font-size: 2.5rem;
 }
 
 section {
@@ -10,29 +24,51 @@ section {
   padding: 20px;
 }
 
-label {
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.container{
+ /*  border:1px solid red; */
+  max-width: 800px;
+  margin: 50px auto 0px;
+  padding: 20px 0px;
+ 
 }
 
+.container h3{
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.container span{
+  font-size: 1rem;
+  
+ 
+}
+
+
+
 .containerJogadas {
-  max-width: 800px;
-  margin: 0 auto;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   gap: 50px;
   border: 2px solid rgb(175, 175, 175);
   border-radius: 20px;
-  height: 120px;
+  height: 150px;
   margin-bottom: 50px;
 }
 
 .containerJogadas img {
   width: 100%;
   object-fit: contain;
+}
+
+label {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .containerJogadas label > input {
