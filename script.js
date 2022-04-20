@@ -8,13 +8,11 @@ const resetContainer = document.querySelector(".resetContainer")
 const btnStart = document.getElementById('start')
 const btnReset = document.getElementById('reset')
 const inputs = document.querySelectorAll(".input")
-console.log(inputs)
-
 
 let pc = '';
 let player = '';
 
-
+//gera jogada computador
 function computer(){
     let math= Math.floor(Math.random()*3 + 1)
 
@@ -27,8 +25,6 @@ function computer(){
         return "pedra"
        
     }
-
-    
 }
 
 function jogador(valor){
@@ -40,7 +36,7 @@ function jogador(valor){
 
 
 
-
+//verifica e msg de resultado
 function res(player, pc){
     comp.innerHTML=` <img src="../images/${pc}.svg" alt="${pc}"><p>${pc}</p>`
     if(player === pc){
@@ -90,6 +86,7 @@ function start(){
     selecionado.innerHTML=`<img src="../images/${player}.svg" alt="${player}"> <p>${player}</p>`;
     res(player, computer())
     selecionado.classList.add("animeLeft");
+    comp.classList.add("animeRight");
     btnStart.style.display="none";
     resetContainer.style.display="flex";
     inputs.forEach(elements =>{
@@ -116,6 +113,7 @@ function reset(){
     player="";
     selecionado.innerHTML=``;
     comp.innerHTML=``;
+    comp.classList.remove("animeRight");
     selecionado.classList.remove("animeLeft");
     btnStart.style.display="block";
     resetContainer.style.display="none";

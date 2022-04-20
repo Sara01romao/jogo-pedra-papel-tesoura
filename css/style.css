@@ -31,7 +31,11 @@ section {
   padding: 20px 0px;
  
 }
-
+#msgErro{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .container h3{
   font-weight: 400;
   display: flex;
@@ -90,10 +94,15 @@ main {
   padding: 20px;
 }
 
+main #comp img{
+  /* transform: rotate(80deg); */
+
+  transform: scaleX(-1);
+}
 .mainContainer {
   max-width: 800px;
   margin: 0 auto;
-  background: rgb(207, 236, 255);
+  /* background: rgb(207, 236, 255); */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -111,7 +120,7 @@ main {
 .animeLeft {
   opacity: 0;
   transform: translateX(-20px);
-  animation: animeLeft 0.3s forwards;
+  animation: animeLeft 0.5s forwards;
 }
 
 @keyframes animeLeft {
@@ -122,13 +131,31 @@ main {
 }
 
 
+.animeRight {
+  opacity: 0;
+  transform: translate(20px);
+  animation: animeRight 0.5s forwards;
+}
+
+@keyframes animeRight {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+
 button{
   height: 40px;
   width: 150px;
-  border: 4px solid black;
   border-radius: 10px;
   font-size: 1.2rem;
   font-family: 'Itim', cursive;
   background-color: rgb(210, 162, 255);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+}
+
+#comp{
+  border: 1px solid red;
 }
