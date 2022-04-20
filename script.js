@@ -42,7 +42,7 @@ function jogador(valor){
 
 
 function res(player, pc){
-    comp.innerHTML=` <img src="../images/${pc}.jpg" alt="${pc}"><p>${pc}</p>`
+    comp.innerHTML=` <img src="../images/${pc}.svg" alt="${pc}"><p>${pc}</p>`
     if(player === pc){
         
         return resultado.innerHTML="empate"
@@ -75,7 +75,7 @@ function msg(valor){
    
    jogador(valor)
 
-  /*  selecionado.innerHTML=`<img src="../images/${valor}.jpg" alt="${valor}"> <p>${valor}</p>`; */
+  /*  selecionado.innerHTML=`<img src="../images/${valor}.svg" alt="${valor}"> <p>${valor}</p>`; */
  
 
 }
@@ -87,7 +87,7 @@ function start(){
     msgErro.innerText=""
     console.log(player)
     console.log(computer())
-    selecionado.innerHTML=`<img src="../images/${player}.jpg" alt="${player}"> <p>${player}</p>`;
+    selecionado.innerHTML=`<img src="../images/${player}.svg" alt="${player}"> <p>${player}</p>`;
     res(player, computer())
     selecionado.classList.add("animeLeft");
     btnStart.style.display="none";
@@ -100,7 +100,7 @@ function start(){
   }else{
     
     msgErro.style.color="red"  ;
-    msgErro.innerHTML=`<img src="../images/alerta.svg" alt="icon"> ` ;
+    msgErro.innerHTML=`<img src="../images/alerta.svg" alt="icon"> você esqueceu ` ;
   }
     
 }
