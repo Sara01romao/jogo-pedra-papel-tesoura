@@ -2,9 +2,9 @@
 
 ## 💻  Sobre o Projeto
 
-Jogo de Pedra- Papel-Tesoura, objetivo em desenvolver o projeto foi práticar a lógica usando a linguagem Javascript. 
+Jogo de Pedra- Papel-Tesoura, objetivo em desenvolver o projeto foi práticar a lógica usando a linguagem Javascript. </br></br>
  [![Deploy with Vercel](https://vercel.com/button)](https://sara01romao.github.io/jogo-pedra-papel-tesoura/)
-<br>
+
 
 
 
