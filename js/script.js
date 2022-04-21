@@ -38,7 +38,7 @@ function jogador(valor){
 
 //verifica e msg de resultado
 function res(player, pc){
-    comp.innerHTML=` <img src="../images/${pc}.svg" alt="${pc}"><p>${pc}</p>`
+    comp.innerHTML=` <img src="./images/${pc}.svg" alt="${pc}"><p>${pc}</p>`
     if(player === pc){
         
         return resultado.innerHTML="Empate"
@@ -79,7 +79,7 @@ function start(){
     
   if(player !== ""){
     msgErro.innerText="";
-    selecionado.innerHTML=`<img src="../images/${player}.svg" alt="${player}"> <p>${player}</p>`;
+    selecionado.innerHTML=`<img src="./images/${player}.svg" alt="${player}"> <p>${player}</p>`;
     res(player, computer())
     selecionado.classList.add("animeLeft");
     comp.classList.add("animeRight");
@@ -93,7 +93,7 @@ function start(){
   }else{
     
     msgErro.style.color="red"  ;
-    msgErro.innerHTML=`<img src="../images/alerta.svg" alt="icon"> você esqueceu ` ;
+    msgErro.innerHTML=`<img src="./images/alerta.svg" alt="icon"> você esqueceu ` ;
   }
     
 }
