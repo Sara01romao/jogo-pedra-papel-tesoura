@@ -67,6 +67,7 @@ label {
   display: flex;
   align-items: center;
   flex-direction: column;
+  
 }
 
 .containerJogadas label > input {
@@ -75,6 +76,10 @@ label {
 
 .containerJogadas label > input:checked + img {
   border: 2px solid rgb(198, 113, 255);
+}
+
+label img:hover{
+ cursor: pointer;
 }
 
 label > p {
