@@ -88,6 +88,16 @@ main {
   padding: 20px;
 }
 
+main #comp, main #selecionado p{
+ text-transform: capitalize;
+}
+
+main #comp, main #selecionado{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 main #comp img {
   /* transform: rotate(80deg); */
 
