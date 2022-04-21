@@ -1,13 +1,14 @@
 
 
-let resultado = document.getElementById('resultado')
-let selecionado = document.getElementById('selecionado')
+let resultado = document.getElementById('resultado');
+let selecionado = document.getElementById('selecionado');
 let comp = document.getElementById('comp');
-const msgErro = document.getElementById('msgErro')
-const resetContainer = document.querySelector(".resetContainer") 
-const btnStart = document.getElementById('start')
-const btnReset = document.getElementById('reset')
-const inputs = document.querySelectorAll(".input")
+const msgErro = document.getElementById('msgErro');
+const resetContainer = document.querySelector(".resetContainer") ;
+const btnStart = document.getElementById('start');
+const btnReset = document.getElementById('reset');
+const inputs = document.querySelectorAll(".input");
+
 
 let pc = '';
 let player = '';
@@ -27,6 +28,7 @@ function computer(){
     }
 }
 
+//receber o valor da jogada do jogador 
 function jogador(valor){
    return valor
    
@@ -34,46 +36,42 @@ function jogador(valor){
 
  
 
-
-
 //verifica e msg de resultado
 function res(player, pc){
     comp.innerHTML=` <img src="../images/${pc}.svg" alt="${pc}"><p>${pc}</p>`
     if(player === pc){
         
-        return resultado.innerHTML="empate"
+        return resultado.innerHTML="Empate"
         
     }else if(player ==="tesoura" && pc === "papel"){
-            return resultado.innerHTML="player ganhou"
+            
+            return resultado.innerHTML="Você ganhou :)"
     }else if (player ==="tesoura" && pc === "pedra"){
-        return resultado.innerHTML="Vc perdeu"
+        return resultado.innerHTML="Você perdeu :("
     }else if (player ==="papel" && pc === "pedra"){
-        return resultado.innerHTML="Vc ganhou"
+        return resultado.innerHTML="Você ganhou :)"
+        
     }else if (player ==="papel" && pc === "tesoura"){
-        return resultado.innerHTML="Vc perdeu"
+        return resultado.innerHTML="Você perdeu :("
     }
     else if (player ==="pedra" && pc === "tesoura"){
-        return resultado.innerHTML="Vc ganhou"
+       
+        return resultado.innerHTML="Você ganhou :)"
+        
     } else if (player ==="pedra" && pc === "papel"){
-        return resultado.innerHTML="Vc perdeu"
+        return resultado.innerHTML="Você perdeu :("
         
     }
-
-
 
 }
 
 
 
-
+//onChange valor
 function msg(valor){
-   player = valor
+   player = valor;
    
-   jogador(valor)
-
-  /*  selecionado.innerHTML=`<img src="../images/${valor}.svg" alt="${valor}"> <p>${valor}</p>`; */
- 
-
+   jogador(valor);
 }
 
 
@@ -121,7 +119,7 @@ function reset(){
         item.checked=false;
     })
   
-    
+   
 
 }
 
