@@ -1,71 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Jogo: Pedra - Papel - Tesoura</title>
-</head>
-<body>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Jogo Pedra Papel Tesoura">
+        <link rel="stylesheet" href="./css/style.css" />
+        <title>Jogo: Pedra - Papel - Tesoura</title>
+    </head>
+    <body>
+        <section>
+            <h1>Pedra - Papel - Tesoura</h1>
 
-    
-    
-    <section >
-        <h1>Pedra - Papel - Tesoura</h1>
-      
-        <div class="container">
-            <h3>Selecionar Jogada: <span id="msgErro"></span> </h3>
-            <div class="containerJogadas">
-                <label for="pedra">
-                
-                    <input onchange="msg(this.value)" type="radio" value="pedra" name="player" id="pedra" class="input">
-                    <img  src="./images/pedra.svg" alt="pedra">
-                    <p>Pedra</p>
-                </label>
-                
-                <label for="papel">
-                
-                    <input onchange="msg(this.value)" type="radio" value="papel" name="player" id="papel" class="input">  
-                    <img  src="./images/papel.svg" alt="papel">
-                    <p>Papel</p>
-                </label>
-                
-                <label for="tesoura">
-                
-                    <input onchange="msg(this.value)" type="radio" value="tesoura" name="player" id="tesoura" class="input">
-                    <img  src="./images/tesoura.svg" alt="tesoura">  
-                    <p>Tesoura</p>
-                </label>
-            </div>  
-    </div>
-          
-    </section>
+            <div class="container">
+                <h3>Selecionar Jogada: <span id="msgErro"></span></h3>
+                <div class="containerJogadas">
+                    <label for="pedra">
+                        <input
+                            onchange="msg(this.value)"
+                            type="radio"
+                            value="pedra"
+                            name="player"
+                            id="pedra"
+                            class="input"
+                        />
+                        <img src="./images/pedra.svg" alt="pedra" />
+                        <p>Pedra</p>
+                    </label>
 
-    <main>
-      <div class="mainContainer">
-        <div id="selecionado" ></div>
-         
-        <div>
-            <button id="start">Começar</button>
+                    <label for="papel">
+                        <input
+                            onchange="msg(this.value)"
+                            type="radio"
+                            value="papel"
+                            name="player"
+                            id="papel"
+                            class="input"
+                        />
+                        <img src="./images/papel.svg" alt="papel" />
+                        <p>Papel</p>
+                    </label>
 
-            <div class="resetContainer">
-                <h2 id="resultado"></h2>
-                <button id="reset">Jogar de Novo</button>
-                
+                    <label for="tesoura">
+                        <input
+                            onchange="msg(this.value)"
+                            type="radio"
+                            value="tesoura"
+                            name="player"
+                            id="tesoura"
+                            class="input"
+                        />
+                        <img src="./images/tesoura.svg" alt="tesoura" />
+                        <p>Tesoura</p>
+                    </label>
+                </div>
             </div>
-        </div>
-       
+        </section>
 
-        <div id="comp" > </div>
-      </div>
-        
+        <main>
+            <div class="mainContainer">
+                <div id="selecionado"></div>
 
-      
-    </main>
+                <div>
+                    <button id="start">Começar</button>
 
+                    <div class="resetContainer">
+                        <h2 id="resultado"></h2>
+                        <button id="reset">Jogar de Novo</button>
+                    </div>
+                </div>
 
+                <div id="comp"></div>
+            </div>
+        </main>
 
-    <script src="./js/script.js"></script>
-</body>
+        <script src="./js/script.js"></script>
+    </body>
 </html>

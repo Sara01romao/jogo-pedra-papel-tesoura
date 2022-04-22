@@ -1,214 +1,212 @@
-@import url("https://fonts.googleapis.com/css2?family=Itim&family=Roboto:wght@100;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Roboto:wght@100;400;700&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-  font-family: "Itim", cursive;
-  font-weight: 100;
-  text-align: center;
-  font-size: 2.5rem;
+    font-family: 'Itim', cursive;
+    font-weight: 100;
+    text-align: center;
+    font-size: 2.5rem;
 }
 
 section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .container {
-  /*  border:1px solid red; */
-  max-width: 800px;
-  margin: 50px auto 0px;
-  padding: 20px 0px;
+    max-width: 800px;
+    margin: 50px auto 0px;
+    padding: 20px 0px;
 }
 #msgErro {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .container h3 {
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-  gap: 20px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .container span {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 .containerJogadas {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  border: 2px solid rgb(175, 175, 175);
-  border-radius: 20px;
-  height: 150px;
-  margin-bottom: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    border: 2px solid rgb(175, 175, 175);
+    border-radius: 20px;
+    height: 150px;
+    margin-bottom: 20px;
 }
 
 .containerJogadas img {
-  width: 100%;
-  object-fit: contain;
+    width: 100%;
+    object-fit: contain;
 }
 
 label {
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .containerJogadas label > input {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 .containerJogadas label > input:checked + img {
-  border: 2px solid rgb(198, 113, 255);
+    border: 2px solid rgb(198, 113, 255);
 }
 
-label img:hover{
- cursor: pointer;
+label img:hover {
+    cursor: pointer;
 }
 
 label > p {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 main {
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
 
-  padding: 20px;
+    padding: 20px;
 }
 
-main #comp, main #selecionado p{
- text-transform: capitalize;
+main #comp,
+main #selecionado p {
+    text-transform: capitalize;
 }
 
-main #comp, main #selecionado{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+main #comp,
+main #selecionado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main #comp img {
-  /* transform: rotate(80deg); */
-
-  transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 .mainContainer {
-  max-width: 800px;
-  margin: 0 auto;
-  /* background: rgb(207, 236, 255); */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  height: 250px;
+    max-width: 800px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 250px;
 }
 
 .resetContainer {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .animeLeft {
-  opacity: 0;
-  transform: translateX(-20px);
-  animation: animeLeft 0.5s forwards;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: animeLeft 0.5s forwards;
 }
 
 @keyframes animeLeft {
-  to {
-    opacity: 1;
-    transform: initial;
-  }
+    to {
+        opacity: 1;
+        transform: initial;
+    }
 }
 
 .animeRight {
-  opacity: 0;
-  transform: translate(20px);
-  animation: animeRight 0.5s forwards;
+    opacity: 0;
+    transform: translate(20px);
+    animation: animeRight 0.5s forwards;
 }
 
 @keyframes animeRight {
-  to {
-    opacity: 1;
-    transform: initial;
-  }
+    to {
+        opacity: 1;
+        transform: initial;
+    }
 }
 
 .resetContainer h2 {
-  font-size: 2.5rem;
-  font-family: "Itim", cursive;
-  color: rgb(118, 0, 228);
+    font-size: 2.5rem;
+    font-family: 'Itim', cursive;
+    color: rgb(118, 0, 228);
 }
 
 button {
-  height: 40px;
-  width: 150px;
-  border-radius: 10px;
-  font-size: 1.2rem;
-  font-family: "Itim", cursive;
-  background-color: rgb(210, 162, 255);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  opacity: 0.8;
-  transition: 0.8s ease;
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: 'Itim', cursive;
+    background-color: rgb(210, 162, 255);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.8s ease;
 }
 
 button:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 @media screen and (max-width: 500px) {
-  h1 {
-    font-size: 2rem;
-  }
-  .containerJogadas {
-    align-items: center;
-    gap: 30px;
-  }
-  .containerJogadas img {
-    width: 60%;
-    object-fit: contain;
-  }
+    h1 {
+        font-size: 2rem;
+    }
+    .containerJogadas {
+        align-items: center;
+        gap: 30px;
+    }
+    .containerJogadas img {
+        width: 60%;
+        object-fit: contain;
+    }
 
-  main {
-    padding: 10px;
-  }
+    main {
+        padding: 10px;
+    }
 
-  main img {
-    width: 50px;
-  }
+    main img {
+        width: 50px;
+    }
 
-  .mainContainer {
-    padding: 10px;
-  }
+    .mainContainer {
+        padding: 10px;
+    }
 
-  .resetContainer h2 {
-    font-size: 1.5rem;
-    text-align: center;
-    font-family: "Itim", cursive;
-    color: rgb(118, 0, 228);
-  }
+    .resetContainer h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        font-family: 'Itim', cursive;
+        color: rgb(118, 0, 228);
+    }
 
-  button {
-    width: 120px;
-    font-size: 1rem;
-  }
+    button {
+        width: 120px;
+        font-size: 1rem;
+    }
 }
